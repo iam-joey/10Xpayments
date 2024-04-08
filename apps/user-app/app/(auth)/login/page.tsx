@@ -16,7 +16,7 @@ export default function SignInThree() {
     email: "",
     password: "",
   });
-
+  const [loading, setLoading] = useState<boolean>(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -27,12 +27,14 @@ export default function SignInThree() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+
+    setLoading(true);
     const res = await signIn("credentials", {
       email: formData.email,
       password: formData.password,
       redirect: false,
     });
+    setLoading(false);
     if (!res?.error) {
       router.push("/");
     }

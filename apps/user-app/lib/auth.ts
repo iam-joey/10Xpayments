@@ -52,7 +52,7 @@ const authOptions: AuthOptions = {
     session: ({ session, token }: any) => {
       session.user.id = token.id;
       delete session.user.image;
-      console.log(session);
+
       return session;
     },
   },
