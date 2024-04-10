@@ -41,7 +41,7 @@ export function TransactionView({ transactions }: any) {
   return (
     <Table>
       <TableCaption className="uppercase text-2xl font-bold mb-3">
-        History
+        Wallet History
       </TableCaption>
       <TableHeader>
         <TableRow className="grid grid-cols-4">

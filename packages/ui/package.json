@@ -7,7 +7,9 @@
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx",
     "./signUp":"./src/signUp.tsx",
-    "./signIn":"./src/signIn.tsx"
+    "./signIn":"./src/signIn.tsx",
+    "./textinput": "./src/TextInput.tsx",
+    "./center": "./src/Center.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
